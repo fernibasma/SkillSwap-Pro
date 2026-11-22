@@ -1,0 +1,68 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-display: 'Outfit', system-ui, sans-serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+    --bg-canvas: #0D0716;
+    --bg-surface: #160D27;
+    --bg-elevated: #1E1335;
+    --accent-rose: #F472B6;
+    --accent-magenta: #EC4899;
+    --accent-violet: #8B5CF6;
+  }
+
+  html {
+    font-family: var(--font-sans);
+    background-color: #0D0716;
+    color: #F8F5FF;
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-mono-tabular {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Cosmic radial ambient canvas backdrop */
+.bg-cosmic-plum {
+  background-color: #0D0716;
+  background-image:
+    radial-gradient(ellipse 65% 55% at 78% 28%, rgba(168, 85, 247, 0.22), transparent 70%),
+    radial-gradient(ellipse 50% 45% at 22% 72%, rgba(236, 72, 153, 0.14), transparent 72%),
+    radial-gradient(ellipse 40% 35% at 88% 82%, rgba(192, 38, 211, 0.16), transparent 70%);
+}
+
+/* Subtle custom scrollbar for midnight plum theme */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0D0716;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(244, 114, 182, 0.22);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(244, 114, 182, 0.45);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

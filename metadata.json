@@ -1,0 +1,8 @@
+{
+  "name": "Remix SkillSwap Pro",
+  "description": "Plateforme universitaire d\u0027échange de compétences, de défis pratiques et de mise en relation entre étudiants et entreprises.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
